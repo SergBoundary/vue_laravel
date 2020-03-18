@@ -23,7 +23,7 @@ class StartController extends Controller {
     
     public function getJson() {
         
-        return [
+        $get_json = [
             [
                 'title' => 'GitHub',
                 'url' => 'https://github.com/SergBoundary'
@@ -33,5 +33,21 @@ class StartController extends Controller {
                 'url' => 'https://www.linkedin.com/in/sergij-bondarenko-analityk/'
             ]
         ];
+        
+        return $get_json;
+    }
+    
+    public function chartData() {
+        
+        $chart_data = [
+            'labels' => ['april', 'may', 'june', 'july'],
+            'datasets' => array([
+                'label' => 'Sales',
+                'backgroundColor' => '#F26202',
+                'data' => [15000, 50000, 10000, 8000],
+            ])
+        ];
+        
+        return $chart_data;
     }
 }
