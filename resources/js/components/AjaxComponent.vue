@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <button v-on:click="update" class="btn btn-primary text mb-1" v-if="!is_refresh">Refresh - {{id}}</button>
+                <button @click="update" class="btn btn-primary text mb-1" v-if="!is_refresh">Refresh - {{id}}</button>
                 <span class="badge badge-primary mb-1" v-if="is_refresh"></span>
                 <table class="table">
                     <thead>

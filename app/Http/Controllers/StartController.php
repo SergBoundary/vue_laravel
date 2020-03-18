@@ -41,13 +41,36 @@ class StartController extends Controller {
         
         $chart_data = [
             'labels' => ['april', 'may', 'june', 'july'],
-            'datasets' => array([
-                'label' => 'Sales',
-                'backgroundColor' => ['#D01919', '#F26202', '#EAAE00', '#B5CC18'],
-                'data' => [15000, 50000, 10000, 8000],
-            ])
+            'datasets' => array(
+                [
+                    'label' => 'Sales',
+                    'backgroundColor' => ['#D01919', '#F26202', '#EAAE00', '#B5CC18'],
+                    'data' => [15000, 50000, 10000, 8000],
+                ]
+            )
         ];
         
         return $chart_data;
+    }
+    
+    public function chartRandom() {
+        
+        $chart_random = [
+            'labels' => ['april', 'may', 'june', 'july'],
+            'datasets' => array(
+                [
+                    'label' => 'Gold',
+                    'backgroundColor' => ['#16AB39'],
+                    'data' => [rand(0, 40000), rand(0, 40000), rand(0, 40000), rand(0, 40000)],
+                ],
+                [
+                    'label' => 'Ssilver',
+                    'backgroundColor' => ['#B5CC18'],
+                    'data' => [rand(0, 40000), rand(0, 40000), rand(0, 40000), rand(0, 40000)],
+                ]
+            )
+        ];
+        
+        return $chart_random;
     }
 }
