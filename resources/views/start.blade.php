@@ -34,6 +34,17 @@
                 </div>
             </div>
         </div>
+    </div><br>
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="card">
+                <div class="card-header">Lesson 4</div>
+
+                <div class="card-body">
+                    <chartpie-component></chartpie-component>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 @endsection

@@ -43,7 +43,7 @@ class StartController extends Controller {
             'labels' => ['april', 'may', 'june', 'july'],
             'datasets' => array([
                 'label' => 'Sales',
-                'backgroundColor' => '#F26202',
+                'backgroundColor' => ['#D01919', '#F26202', '#EAAE00', '#B5CC18'],
                 'data' => [15000, 50000, 10000, 8000],
             ])
         ];

@@ -23,6 +23,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('prop-component', require('./components/PropComponent.vue').default);
 Vue.component('ajax-component', require('./components/AjaxComponent.vue').default);
 Vue.component('chartline-component', require('./components/ChartlineComponent.vue').default);
+Vue.component('chartpie-component', require('./components/ChartpieComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
