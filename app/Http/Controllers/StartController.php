@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Events\NewEvent;
 
 class StartController extends Controller {
     
@@ -72,5 +73,31 @@ class StartController extends Controller {
         ];
         
         return $chart_random;
+    }
+    
+    public function newEvent(Request $request) {
+        
+        $result = [
+            'labels' => ['april', 'may', 'june', 'july'],
+            'datasets' => array(
+                [
+                    'label' => 'Sales',
+                    'backgroundColor' => ['#F26202'],
+                    'data' => [15000, 50000, 10000, 30000],
+                ]
+            )
+        ];
+        
+        if($request->has('label')) {
+            $result['labels'][] = $request->input('label');
+            $result['datasets'][0]['data'][] = (integer)$request->input('sale');
+            
+            if($request->has('realtime')) {
+                if(filter_var($request->input('realtime'), FILTER_VALIDATE_BOOLEAN)) {
+                    event(new NewEvent($result));
+                }
+            }
+        }
+        return $result;
     }
 }
