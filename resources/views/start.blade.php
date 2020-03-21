@@ -61,6 +61,16 @@
                 </div>
             </div>
         </div>
+    </div><br>
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="card">
+                <div class="card-header">Lesson 7</div>
+                <div class="card-body">
+                    <socket-chat-component></socket-chat-component>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 @endsection
